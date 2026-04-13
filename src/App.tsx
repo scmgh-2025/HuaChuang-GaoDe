@@ -148,15 +148,15 @@ export default function App() {
   const [activePilotTab, setActivePilotTab] = useState(0);
 
   const liveMapSteps = [
-    { title: '开启活点模式', desc: '高德地图首页支持一键开启“活点地图”模式', image: '/assets/4-2-1.png' },
-    { title: '查看扫街榜', desc: '进入活点模式后查看“扫街榜”头部商户和达人', image: '/assets/4-2-2.png' },
-    { title: 'Pin 感兴趣活点', desc: '在地图上直接 Pin 住感兴趣的活点位置', image: '/assets/4-2-3.png' },
-    { title: '形成旅程清单', desc: '自动将已 Pin 的活点汇总形成初步旅程清单', image: '/assets/4-2-4.png' },
-    { title: '规划行程目的地', desc: '按照时间先后顺序智能规划清单中的行程目的地，并可放大每个目的地展示关联的活动、达人和打卡点', image: '/assets/4-2-5-1.png', image2: '/assets/4-2-5-2.png' },
-    { title: '召唤黄小西', desc: '在行程页点“黄小西妙招”，进入智能体询价', image: '/assets/4-2-6.png' },
-    { title: '智能体询价', desc: '智能体依据行程实时推送相关优惠套餐', image: '/assets/4-2-7.png' },
-    { title: '打包购买', desc: '一键打包购买行程中的所有旅游产品并下单', image: '/assets/4-2-8.png' },
-    { title: '完成支付', desc: '完成支付并生成订单，支持一键导航前往', image: '/assets/4-2-9.png' },
+    { title: '开启活点模式', desc: '高德地图首页支持一键开启“活点地图”模式', image: './assets/4-2-1.png' },
+    { title: '查看扫街榜', desc: '进入活点模式后查看“扫街榜”头部商户和达人', image: './assets/4-2-2.png' },
+    { title: 'Pin 感兴趣活点', desc: '在地图上直接 Pin 住感兴趣的活点位置', image: './assets/4-2-3.png' },
+    { title: '形成旅程清单', desc: '自动将已 Pin 的活点汇总形成初步旅程清单', image: './assets/4-2-4.png' },
+    { title: '规划行程目的地', desc: '按照时间先后顺序智能规划清单中的行程目的地，并可放大每个目的地展示关联的活动、达人和打卡点', image: './assets/4-2-5-1.png', image2: './assets/4-2-5-2.png' },
+    { title: '召唤黄小西', desc: '在行程页点“黄小西妙招”，进入智能体询价', image: './assets/4-2-6.png' },
+    { title: '智能体询价', desc: '智能体依据行程实时推送相关优惠套餐', image: './assets/4-2-7.png' },
+    { title: '打包购买', desc: '一键打包购买行程中的所有旅游产品并下单', image: './assets/4-2-8.png' },
+    { title: '完成支付', desc: '完成支付并生成订单，支持一键导航前往', image: './assets/4-2-9.png' },
   ];
 
   const ecosystemTabs = [
@@ -193,7 +193,7 @@ export default function App() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/1-1.png" 
+            src="./assets/1-1.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -388,38 +388,38 @@ export default function App() {
                     title: '景区智能体',
                     icon: MapPin,
                     items: ['智能导览与讲解', '票务分时预约', '客流预警引导'],
-                    image: '/assets/景区智能体.png'
+                    image: './assets/景区智能体.png'
                   },
                   {
                     title: '酒店智能体',
                     icon: Hotel,
                     items: ['入住咨询与房型介绍', '智能推荐与周边服务', '客户关怀与满意度调查'],
-                    image: '/assets/酒店智能体.jpg'
+                    image: './assets/酒店智能体.jpg'
                   },
                   {
                     title: '餐饮智能体',
                     icon: UtensilsCrossed,
                     items: ['菜单推荐与口味偏好', '排队预约与在线取号', '优惠推送与食材溯源'],
-                    image: '/assets/餐饮智能体.jpg'
+                    image: './assets/餐饮智能体.jpg'
                   },
                   {
                     title: '个人智能体',
                     icon: UserCircle,
                     items: ['AI帮讲故事', '24h在线接待', '咨询秒回撮合'],
-                    image: '/assets/个人智能体.png'
+                    image: './assets/个人智能体.png'
                   },
                   {
                     title: '诊所/药店智能体',
                     icon: Activity,
                     items: ['预约挂号与候诊提醒', '健康咨询与用药指导', '院内导航与位置指引'],
-                    image: '/assets/f1efe81fedc99b52ae2b2b70ce91be1e.png',
+                    image: './assets/f1efe81fedc99b52ae2b2b70ce91be1e.png',
                     isPC: true
                   },
                   {
                     title: 'B端工作台',
                     icon: LayoutDashboard,
                     items: ['经营数据看板', '客户画像管理', '营销工具配置'],
-                    image: '/assets/B端工作台.png',
+                    image: './assets/B端工作台.png',
                     isPC: false
                   }
                 ].map((card, idx) => (
@@ -630,7 +630,7 @@ export default function App() {
                 ],
                 icon: Camera,
                 color: 'blue',
-                image: '/assets/3-1旅拍.png',
+                image: './assets/3-1旅拍.png',
                 displayTitle: 'AI 旅拍助手界面',
                 displayDesc: '实时构图指导、光影优化建议，让普通游客也能拍出专业级大片，通过高价值服务建立品牌信任。'
               },
@@ -643,7 +643,7 @@ export default function App() {
                 ],
                 icon: Coffee,
                 color: 'teal',
-                image: '/assets/3-2餐饮.png',
+                image: './assets/3-2餐饮.png',
                 displayTitle: '智能餐饮转化界面',
                 displayDesc: '结合停车状态与地理位置，在用户最需要休息与用餐的时刻，精准推送周边餐厅的场景化优惠。'
               },
@@ -656,7 +656,7 @@ export default function App() {
                 ],
                 icon: Hotel,
                 color: 'orange',
-                image: '/assets/3-3酒店.png',
+                image: './assets/3-3酒店.png',
                 displayTitle: '酒店二次消费转化',
                 displayDesc: '在办理入住后的黄金服务时刻，通过智能体主动推送房型升级、特色餐饮或SPA优惠，提升客单价。'
               }
@@ -931,10 +931,10 @@ export default function App() {
                 </div>
                 <div className="flex justify-center gap-8">
                   <PhoneFrame title="对客名片 (虾片)">
-                    <img src="/assets/4-3-1.png" alt="对客名片" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="./assets/4-3-1.png" alt="对客名片" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </PhoneFrame>
                   <PhoneFrame title="AI 工作台">
-                    <img src="/assets/4-3-2.png" alt="AI 工作台" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="./assets/4-3-2.png" alt="AI 工作台" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </PhoneFrame>
                 </div>
               </div>
