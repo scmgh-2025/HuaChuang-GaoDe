@@ -148,15 +148,15 @@ export default function App() {
   const [activePilotTab, setActivePilotTab] = useState(0);
 
   const liveMapSteps = [
-    { title: '开启活点模式', desc: '高德地图首页支持一键开启“活点地图”模式', image: 'https://picsum.photos/seed/map-step1/500/1000' },
-    { title: '查看扫街榜', desc: '进入活点模式后查看“扫街榜”头部商户和达人', image: 'https://picsum.photos/seed/map-step2/500/1000' },
-    { title: 'Pin 感兴趣活点', desc: '在地图上直接 Pin 住感兴趣的活点位置', image: 'https://picsum.photos/seed/map-step3/500/1000' },
-    { title: '形成旅程清单', desc: '自动将已 Pin 的活点汇总形成初步旅程清单', image: 'https://picsum.photos/seed/map-step4/500/1000' },
-    { title: '规划行程目的地', desc: '按照时间先后顺序智能规划清单中的行程目的地', image: 'https://picsum.photos/seed/map-step5/500/1000' },
-    { title: '放大目的地详情', desc: '放大每个目的地可展示关联的活动、达人和打卡点', image: 'https://picsum.photos/seed/map-step6/500/1000' },
-    { title: '召唤黄小西', desc: '在行程页点“黄小西妙招”，进入智能体询价', image: 'https://picsum.photos/seed/map-step7/500/1000' },
-    { title: '智能体询价', desc: '智能体依据行程实时推送相关优惠套餐', image: 'https://picsum.photos/seed/map-step8/500/1000' },
-    { title: '打包购买', desc: '一键打包购买行程中的所有旅游产品并下单', image: 'https://picsum.photos/seed/map-step9/500/1000' },
+    { title: '开启活点模式', desc: '高德地图首页支持一键开启“活点地图”模式', image: '/assets/4-2-1.png' },
+    { title: '查看扫街榜', desc: '进入活点模式后查看“扫街榜”头部商户和达人', image: '/assets/4-2-2.png' },
+    { title: 'Pin 感兴趣活点', desc: '在地图上直接 Pin 住感兴趣的活点位置', image: '/assets/4-2-3.png' },
+    { title: '形成旅程清单', desc: '自动将已 Pin 的活点汇总形成初步旅程清单', image: '/assets/4-2-4.png' },
+    { title: '规划行程目的地', desc: '按照时间先后顺序智能规划清单中的行程目的地，并可放大每个目的地展示关联的活动、达人和打卡点', image: '/assets/4-2-5-1.png', image2: '/assets/4-2-5-2.png' },
+    { title: '召唤黄小西', desc: '在行程页点“黄小西妙招”，进入智能体询价', image: '/assets/4-2-6.png' },
+    { title: '智能体询价', desc: '智能体依据行程实时推送相关优惠套餐', image: '/assets/4-2-7.png' },
+    { title: '打包购买', desc: '一键打包购买行程中的所有旅游产品并下单', image: '/assets/4-2-8.png' },
+    { title: '完成支付', desc: '完成支付并生成订单，支持一键导航前往', image: '/assets/4-2-9.png' },
   ];
 
   const ecosystemTabs = [
@@ -193,7 +193,7 @@ export default function App() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.imgur.com/your-image-url.jpg" 
+            src="/assets/1-1.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -388,37 +388,39 @@ export default function App() {
                     title: '景区智能体',
                     icon: MapPin,
                     items: ['智能导览与讲解', '票务分时预约', '客流预警引导'],
-                    image: 'https://picsum.photos/seed/scenic-view/400/800'
+                    image: '/assets/景区智能体.png'
                   },
                   {
                     title: '酒店智能体',
                     icon: Hotel,
                     items: ['入住咨询与房型介绍', '智能推荐与周边服务', '客户关怀与满意度调查'],
-                    image: 'https://picsum.photos/seed/hotel-view/400/800'
+                    image: '/assets/酒店智能体.jpg'
                   },
                   {
-                    title: '餐厅智能体',
+                    title: '餐饮智能体',
                     icon: UtensilsCrossed,
                     items: ['菜单推荐与口味偏好', '排队预约与在线取号', '优惠推送与食材溯源'],
-                    image: 'https://picsum.photos/seed/rest-view/400/800'
+                    image: '/assets/餐饮智能体.jpg'
                   },
                   {
                     title: '个人智能体',
                     icon: UserCircle,
                     items: ['AI帮讲故事', '24h在线接待', '咨询秒回撮合'],
-                    image: 'https://picsum.photos/seed/person-view/400/800'
+                    image: '/assets/个人智能体.png'
                   },
                   {
                     title: '诊所/药店智能体',
                     icon: Activity,
                     items: ['预约挂号与候诊提醒', '健康咨询与用药指导', '院内导航与位置指引'],
-                    image: 'https://picsum.photos/seed/clinic-view/400/800'
+                    image: '/assets/f1efe81fedc99b52ae2b2b70ce91be1e.png',
+                    isPC: true
                   },
                   {
                     title: 'B端工作台',
                     icon: LayoutDashboard,
                     items: ['经营数据看板', '客户画像管理', '营销工具配置'],
-                    image: 'https://picsum.photos/seed/workbench-view/400/800'
+                    image: '/assets/B端工作台.png',
+                    isPC: true
                   }
                 ].map((card, idx) => (
                   <div key={idx} className="bg-slate-50/50 rounded-[2.5rem] p-10 border border-slate-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500">
@@ -436,9 +438,13 @@ export default function App() {
                         </div>
                       ))}
                     </div>
-                    <div className="w-full max-w-[200px] aspect-[9/18] bg-slate-900 rounded-[2.5rem] border-[6px] border-slate-900 overflow-hidden shadow-2xl relative group-hover:scale-105 transition-transform duration-500">
-                      <img src={card.image} alt={card.title} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className={cn(
+                      "w-full bg-slate-900 overflow-hidden shadow-2xl relative group-hover:scale-105 transition-transform duration-500",
+                      card.isPC 
+                        ? "aspect-video rounded-xl border-[4px] border-slate-800" 
+                        : "max-w-[200px] aspect-[9/18] rounded-[2.5rem] border-[6px] border-slate-900"
+                    )}>
+                      <img src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     </div>
                   </div>
                 ))}
@@ -624,7 +630,7 @@ export default function App() {
                 ],
                 icon: Camera,
                 color: 'blue',
-                image: 'https://picsum.photos/seed/travel-photo/1280/720',
+                image: '/assets/3-1旅拍.png',
                 displayTitle: 'AI 旅拍助手界面',
                 displayDesc: '实时构图指导、光影优化建议，让普通游客也能拍出专业级大片，通过高价值服务建立品牌信任。'
               },
@@ -637,7 +643,7 @@ export default function App() {
                 ],
                 icon: Coffee,
                 color: 'teal',
-                image: 'https://picsum.photos/seed/rest-package/1280/720',
+                image: '/assets/3-2餐饮.png',
                 displayTitle: '智能餐饮转化界面',
                 displayDesc: '结合停车状态与地理位置，在用户最需要休息与用餐的时刻，精准推送周边餐厅的场景化优惠。'
               },
@@ -650,7 +656,7 @@ export default function App() {
                 ],
                 icon: Hotel,
                 color: 'orange',
-                image: 'https://picsum.photos/seed/hotel-upgrade/1280/720',
+                image: '/assets/3-3酒店.png',
                 displayTitle: '酒店二次消费转化',
                 displayDesc: '在办理入住后的黄金服务时刻，通过智能体主动推送房型升级、特色餐饮或SPA优惠，提升客单价。'
               }
@@ -790,25 +796,40 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <PhoneFrame title="节点智能推送">
-                    <img src="https://picsum.photos/seed/push-ui/500/1000" alt="Push UI" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    <div className="absolute top-20 left-4 right-4">
-                      <motion.div 
-                        initial={{ x: 50, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        className="bg-white/95 backdrop-blur-xl p-5 rounded-2xl shadow-2xl border-l-4 border-orange-500"
-                      >
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center">
-                            <Bell className="w-4 h-4 text-orange-600" />
-                          </div>
-                          <div className="text-[10px] font-black text-slate-900">高德地图 · 智能体助手</div>
-                        </div>
-                        <div className="text-xs font-bold text-slate-900 mb-1">您已到达黄果树景区</div>
-                        <p className="text-[10px] text-slate-500">点击开启“超时空活点地图”，为您实时避开拥堵路段。</p>
-                      </motion.div>
+                  <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden w-full max-w-lg">
+                    <div className="bg-slate-50 border-b border-slate-200 px-6 py-4">
+                      <h4 className="text-lg font-black text-slate-900">推送策略-服务场景匹配</h4>
                     </div>
-                  </PhoneFrame>
+                    <div className="divide-y divide-slate-100">
+                      {[
+                        { type: '全域级推送', trigger: '飞机/高铁落地贵州后首次打开高德', content: '黄小西欢迎页+行程规划服务+消费券领取', target: '建立服务入口认知' },
+                        { type: '目的地级推送', trigger: '到达黄果树停车场/酒店周边', content: '对应场景智能体（景区/酒店智能体）', target: '提供即时服务' },
+                        { type: '行程级推送', trigger: '根据用户已规划行程，在对应时间节点', content: '下一站提醒+预约服务+交通建议', target: '行程串联服务' },
+                        { type: '行为级推送', trigger: '搜索"贵州攻略"/"黄果树门票"/“贵州饭店”等', content: '相关产品包+智能体入口', target: '需求即时响应' }
+                      ].map((item, idx) => (
+                        <div key={idx} className="p-6 hover:bg-slate-50 transition-colors">
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-bold">
+                              {item.type}
+                            </span>
+                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-100 px-2 py-1 rounded-md">
+                              {item.target}
+                            </span>
+                          </div>
+                          <div className="space-y-2">
+                            <div>
+                              <span className="text-xs font-bold text-slate-400 block mb-1">触发条件</span>
+                              <div className="text-sm font-medium text-slate-700">{item.trigger}</div>
+                            </div>
+                            <div>
+                              <span className="text-xs font-bold text-slate-400 block mb-1">推送内容</span>
+                              <div className="text-sm font-bold text-slate-900">{item.content}</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -860,6 +881,7 @@ export default function App() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
+                    className="flex gap-8"
                   >
                     <PhoneFrame title={liveMapSteps[activeMapStep].title}>
                       <img src={liveMapSteps[activeMapStep].image} alt={liveMapSteps[activeMapStep].title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -868,6 +890,15 @@ export default function App() {
                         <div className="text-xs font-bold leading-relaxed">{liveMapSteps[activeMapStep].desc}</div>
                       </div>
                     </PhoneFrame>
+                    {liveMapSteps[activeMapStep].image2 && (
+                      <PhoneFrame title={liveMapSteps[activeMapStep].title}>
+                        <img src={liveMapSteps[activeMapStep].image2} alt={liveMapSteps[activeMapStep].title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                        <div className="absolute bottom-24 left-4 right-4 p-5 glass rounded-3xl border-white/30 text-slate-900">
+                          <div className="text-[10px] font-black text-blue-600 mb-1 uppercase tracking-widest">Step {activeMapStep + 1} (详情)</div>
+                          <div className="text-xs font-bold leading-relaxed">放大每个目的地可展示关联的活动、达人和打卡点</div>
+                        </div>
+                      </PhoneFrame>
+                    )}
                   </motion.div>
                 </div>
               </div>
@@ -898,20 +929,12 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <PhoneFrame title="AI 名片 (虾片)">
-                    <img src="https://picsum.photos/seed/card-ui/500/1000" alt="Card UI" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 flex flex-col justify-end p-8">
-                      <div className="w-16 h-16 rounded-2xl border-2 border-white mb-4 overflow-hidden shadow-2xl">
-                        <img src="https://picsum.photos/seed/guide/200/200" alt="avatar" referrerPolicy="no-referrer" />
-                      </div>
-                      <div className="text-white font-black text-xl mb-1">金牌导游 · 阿强</div>
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-                        <div className="text-teal-400 text-xs font-bold uppercase tracking-widest">AI 智能体在线</div>
-                      </div>
-                      <button className="w-full py-3 bg-white text-slate-900 rounded-xl font-bold text-sm">立即咨询</button>
-                    </div>
+                <div className="flex justify-center gap-8">
+                  <PhoneFrame title="对客名片 (虾片)">
+                    <img src="/assets/4-3-1.png" alt="对客名片" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  </PhoneFrame>
+                  <PhoneFrame title="AI 工作台">
+                    <img src="/assets/4-3-2.png" alt="AI 工作台" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </PhoneFrame>
                 </div>
               </div>
@@ -1008,25 +1031,30 @@ export default function App() {
                     </ul>
                   </button>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center w-full">
                   <motion.div
                     key={activeEntrySubTab}
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="relative"
+                    className="relative w-full max-w-[400px] h-[800px]"
                   >
                     <div className={cn(
                       "absolute -inset-4 blur-3xl rounded-full transition-colors duration-500",
                       activeEntrySubTab === 0 ? "bg-blue-500/10" : "bg-teal-500/10"
                     )} />
-                    <PhoneFrame title={activeEntrySubTab === 0 ? "POI 详情页入口" : "活点地图入口"}>
-                      <img 
-                        src={activeEntrySubTab === 0 ? "https://picsum.photos/seed/poi-entry/500/1000" : "https://picsum.photos/seed/livemap-entry/500/1000"} 
-                        alt="Entry Preview" 
-                        className="w-full h-full object-cover" 
-                        referrerPolicy="no-referrer" 
+                    <div className="relative w-full h-full bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                      <div className="absolute top-0 left-0 right-0 h-12 bg-slate-100 border-b border-slate-200 flex items-center justify-center z-10">
+                        <div className="text-sm font-bold text-slate-600">
+                          {activeEntrySubTab === 0 ? "POI 详情页入口" : "活点地图入口"}
+                        </div>
+                      </div>
+                      <iframe 
+                        src="https://arifinfirman788-blip.github.io/413gaode/" 
+                        className="w-full h-full pt-12 border-0 bg-white"
+                        title="Live Preview"
+                        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                       />
-                    </PhoneFrame>
+                    </div>
                   </motion.div>
                 </div>
               </div>
@@ -1346,15 +1374,8 @@ export default function App() {
                     ))}
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <PhoneFrame title="用户侧推广展示">
-                    <img src="https://picsum.photos/seed/promotion-ui/500/1000" alt="Promotion UI" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    <div className="absolute bottom-20 left-4 right-4 p-6 glass rounded-[2rem] border-white/30 shadow-2xl">
-                      <div className="text-blue-600 font-black text-sm mb-2">限时福利</div>
-                      <div className="text-slate-900 font-black text-lg mb-4">领取黄果树景区智能管家专属 50 元优惠券</div>
-                      <button className="w-full py-3 bg-blue-600 text-white rounded-xl font-black text-sm">立即领取</button>
-                    </div>
-                  </PhoneFrame>
+                <div className="hidden lg:block">
+                  {/* 用户侧推广展示框已移除 */}
                 </div>
               </div>
             )}
