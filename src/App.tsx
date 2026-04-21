@@ -357,9 +357,9 @@ export default function App() {
             {/* 3、 游客端 */}
             <div>
               <SectionHeading number="03" color="fuchsia" title="围绕游客服务需求，以“行程”为核心开发“黄小西”游客服务智能体。" />
-              <div className="grid lg:grid-cols-12 gap-12 items-start bg-white p-12 rounded-[3rem] shadow-xl border border-slate-100">
-                <div className="lg:col-span-7 space-y-12">
-                  <div className="flex flex-col gap-y-12 justify-center h-full">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-8 lg:p-12 rounded-[3rem] shadow-xl border border-slate-100">
+                <div className="lg:col-span-6 space-y-12">
+                  <div className="grid sm:grid-cols-2 gap-8 justify-center h-full">
                     <div className="space-y-2">
                       <div className="flex items-center gap-4 mb-2">
                         <div className="w-12 h-12 bg-violet-50 text-violet-600 rounded-xl flex items-center justify-center shrink-0">
@@ -402,8 +402,8 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 flex justify-center">
-                  <div className="relative w-[360px] h-[720px] rounded-[40px] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-white group">
+                <div className="lg:col-span-6 flex justify-center">
+                  <div className="relative w-full max-w-[400px] aspect-[9/19.5] rounded-[40px] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-white group">
                     <iframe 
                       src="https://arifinfirman788-blip.github.io/HuangxiaoxiV4.0/" 
                       className="w-full h-full border-0"
