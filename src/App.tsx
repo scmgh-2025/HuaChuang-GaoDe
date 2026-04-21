@@ -143,9 +143,7 @@ export default function App() {
                   智能体组网生态
                 </span>
               </h1>
-              <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto mb-10">
-                以“统一迭代”思维代替“分散建设”，补齐深度服务短板，实现流量、数据与商业价值的全面共赢。
-              </p>
+              
               <div className="h-1.5 w-32 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full shadow-lg" />
             </motion.div>
           </div>
@@ -154,7 +152,7 @@ export default function App() {
           <div className="space-y-32">
             {/* 1、 政府端 */}
             <div>
-              <SectionHeading number="01" color="indigo" title="依托大模型技术，通过接入数据和调整算法打造出一套省市区通用的文旅部门智能平台。" />
+              <SectionHeading number="01" color="indigo" title="依托大模型技术，通过接入数据和调整算法打造一套省市区通用的文旅部门智能平台" />
               <div className="bg-white text-slate-900 rounded-[48px] p-12 relative overflow-hidden shadow-xl border border-slate-100">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50 rounded-full blur-[80px] opacity-70 -mr-20 -mt-20 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-50 rounded-full blur-[80px] opacity-60 -ml-20 -mb-20 pointer-events-none"></div>
@@ -406,26 +404,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 py-20 text-white border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-16 items-center">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/20">A</div>
-              <span className="text-3xl font-black tracking-tight">高德 <span className="text-blue-600">x</span> 华创云信</span>
-            </div>
-            <div className="text-slate-500 text-sm font-medium text-center">
-              © 2026 华创云信 & 高德地图 <br /> 战略合作项目组 · 联合发布
-            </div>
-            <div className="flex justify-center md:justify-end gap-10">
-              <Globe className="w-6 h-6 text-slate-500 hover:text-white transition-colors cursor-pointer" />
-              <Smartphone className="w-6 h-6 text-slate-500 hover:text-white transition-colors cursor-pointer" />
-              <MessageSquare className="w-6 h-6 text-slate-500 hover:text-white transition-colors cursor-pointer" />
-              <ShieldCheck className="w-6 h-6 text-slate-500 hover:text-white transition-colors cursor-pointer" />
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }
