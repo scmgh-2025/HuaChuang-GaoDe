@@ -428,25 +428,6 @@ export default function App() {
           >
             {activeTab === 0 && (
               <div className="space-y-16">
-                <div className="bg-white rounded-[3rem] p-12 shadow-xl border border-slate-100">
-                  <h3 className="text-3xl font-black text-slate-900 mb-8">商户智能体核心能力模块</h3>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {[
-                      { t: '前台接待模块', d: '7×24小时自动应答，处理预订咨询、营业时间、路线指引等高频问题' },
-                      { t: '经营分析模块', d: '实时展示客流、订单、营收数据，提供经营健康度诊断' },
-                      { t: '客户管理模块', d: '记录客户偏好、消费历史，支持会员管理和精准召回' },
-                      { t: '营销推送模块', d: '基于场景自动触发优惠推送、活动提醒' }
-                    ].map((m, i) => (
-                      <div key={i} className="space-y-3">
-                        <div className="font-black text-blue-600 flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-600" />
-                          {m.t}
-                        </div>
-                        <p className="text-slate-500 text-sm font-medium leading-relaxed">{m.d}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
                 {[
