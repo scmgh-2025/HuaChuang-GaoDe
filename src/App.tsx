@@ -114,6 +114,56 @@ const SectionHeading = ({ number, title, color = "blue" }: any) => {
   );
 };
 
+const ImageSlider = ({ images, link }: { images: string[], link?: string }) => {
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images]);
+
+  const content = (
+    <div className="relative w-full h-full">
+      {images.map((src, index) => (
+        <img
+          key={index}
+          loading="lazy"
+          src={src}
+          alt={`Slide ${index + 1}`}
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+            index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+          )}
+          referrerPolicy="no-referrer"
+        />
+      ))}
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={cn(
+              "w-1.5 h-1.5 rounded-full transition-all duration-300",
+              index === currentIndex ? "bg-white w-4" : "bg-white/50"
+            )}
+          />
+        ))}
+      </div>
+    </div>
+  );
+
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full h-full hover:opacity-90 transition-opacity">
+        {content}
+      </a>
+    );
+  }
+  return content;
+};
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
@@ -376,12 +426,11 @@ export default function App() {
             {/* 4、 迭代升级 */}
             <div>
               <SectionHeading number="04" color="teal" title="以“统一迭代”思维代替“分散建设”思维，不断根据用户需求、数据反馈升级调整功能。" />
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { img: 'v1.png', title: '1.0 表单式提示词', desc: '功能清晰，偏工具被动响应' },
-                  { img: 'v2.png', title: '2.0 预设问题引导', desc: '从工具逻辑向对话逻辑转变' },
-                  { img: 'v3.png', title: '3.0 多数字分身卡片', desc: '角色化、人格化、服务分层' },
-                  { img: 'v4.png', title: '4.0 能力直接前置', desc: '根据状态动态推荐智能体能力' }
+                  { img: '景区1.jpg', title: '1.0', desc: '票务分时预约，合理规划行程' },
+                  { img: '景区2.jpg', title: '2.0', desc: '智能导览与讲解，提升游玩体验' },
+                  { img: '景区3.jpg', title: '3.0', desc: '客流预警引导，安全有序疏导' }
                 ].map((v, i) => (
                   <div key={i} className="bg-white rounded-[2rem] p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
                     <div className="aspect-[9/18] bg-slate-100 rounded-2xl overflow-hidden mb-6 relative border border-slate-200">
