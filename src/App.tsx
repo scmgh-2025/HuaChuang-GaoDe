@@ -195,8 +195,7 @@ export default function App() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={import.meta.env.BASE_URL + 'assets/1-1.png'} 
+          <img src={import.meta.env.BASE_URL + 'assets/1-1.jpg'} 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -227,7 +226,7 @@ export default function App() {
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map(i => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white/20 bg-slate-800 overflow-hidden shadow-sm">
-                      <img src={`https://picsum.photos/seed/user${i}/100/100`} alt="user" referrerPolicy="no-referrer" />
+                      <img loading="lazy" src={`https://picsum.photos/seed/user${i}/100/100`} alt="user" referrerPolicy="no-referrer" />
                     </div>
                   ))}
                 </div>
@@ -313,12 +312,12 @@ export default function App() {
                       import.meta.env.BASE_URL + 'assets/e8a91d5c8c3b6e0a9e53d83e7cc4d288.jpg'
                     ].map((src, index) => (
                       <div key={index} className="aspect-[9/19.5] bg-white rounded-lg border border-slate-100 flex items-center justify-center text-slate-300 text-[10px] font-bold shadow-sm overflow-hidden">
-                        <img src={src} alt={"展示图" + (index + 1)} className="w-full h-full object-cover" />
+                        <img loading="lazy" src={src} alt={"展示图" + (index + 1)} className="w-full h-full object-cover" />
                       </div>
                     ))}
                   </div>
                   <div className="aspect-[16/10] bg-white rounded-xl border border-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold shadow-sm overflow-hidden">
-                    <img src={import.meta.env.BASE_URL + "assets/4991f55ea85abc50aa6a75c6effb763f.png"} alt="PC端展示位" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={import.meta.env.BASE_URL + "assets/4991f55ea85abc50aa6a75c6effb763f.png"} alt="PC端展示位" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="w-24 h-2 bg-slate-800/10 mx-auto mt-4 rounded-full blur-sm" />
@@ -530,7 +529,7 @@ export default function App() {
                         ? "aspect-video rounded-xl border-[4px] border-slate-800" 
                         : "max-w-[200px] aspect-[9/18] rounded-[2.5rem] border-[6px] border-slate-900"
                     )}>
-                      <img src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                      <img loading="lazy" src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     </div>
                   </div>
                 ))}
@@ -563,7 +562,7 @@ export default function App() {
 
                 <div className="lg:col-span-2">
                   <div className="w-full aspect-video rounded-[3rem] bg-slate-900 overflow-hidden shadow-2xl border-[12px] border-slate-900 relative group">
-                    <img src="https://picsum.photos/seed/service-169/1280/720" alt="Service Visualization" className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://picsum.photos/seed/service-169/1280/720" alt="Service Visualization" className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                     <div className="absolute bottom-10 left-10 right-10">
                       <div className="text-white font-black text-3xl mb-3">主动陪伴式服务界面</div>
@@ -635,8 +634,7 @@ export default function App() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="w-full aspect-video rounded-[3rem] bg-slate-900 overflow-hidden shadow-2xl border-[12px] border-slate-900 relative group"
                   >
-                    <img 
-                      src={
+                    <img loading="lazy" src={
                         activeDataSubTab === 0 ? "https://picsum.photos/seed/data-products/1280/720" :
                         activeDataSubTab === 1 ? "https://picsum.photos/seed/rest-marketing/1280/720" :
                         activeDataSubTab === 2 ? "https://picsum.photos/seed/hotel-pricing/1280/720" :
