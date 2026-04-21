@@ -248,7 +248,7 @@ export default function App() {
                       
                       {/* PC端展示卡片 (背景层) */}
                       <div className="absolute top-4 right-0 w-[85%] group z-10">
-                        <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-2 pb-6 border border-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] transition-transform duration-500 group-hover:-translate-y-2">
+                        <a href="https://glsw-provincescreen.aihuangxiaoxi.com/admin/#/index" target="_blank" rel="noopener noreferrer" className="block bg-white/80 backdrop-blur-xl rounded-2xl p-2 pb-6 border border-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] transition-transform duration-500 group-hover:-translate-y-2 hover:cursor-pointer">
                           <div className="flex gap-1.5 px-3 pt-1 pb-3">
                             <div className="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
                             <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
@@ -257,7 +257,7 @@ export default function App() {
                           <div className="aspect-[16/10] bg-slate-100 rounded-xl overflow-hidden border border-slate-100/50">
                             <img src={import.meta.env.BASE_URL + "assets/gov-pc.png"} alt="PC端驾驶舱" className="w-full h-full object-cover" />
                           </div>
-                        </div>
+                        </a>
                         <div className="absolute -bottom-6 right-8 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-slate-100 flex items-center gap-2 text-indigo-600 font-bold text-sm">
                           <LayoutDashboard size={16} /> PC端管理后台
                         </div>
@@ -265,14 +265,14 @@ export default function App() {
 
                       {/* 移动端展示卡片 (前景层) */}
                       <div className="absolute bottom-4 left-4 w-[35%] group z-20">
-                        <div className="bg-slate-900 rounded-[3rem] p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-4 border-slate-800 transition-transform duration-500 group-hover:-translate-y-4 group-hover:rotate-2">
+                        <a href="https://glsw-provincescreen.aihuangxiaoxi.com/h5/#/dashboard" target="_blank" rel="noopener noreferrer" className="block bg-slate-900 rounded-[3rem] p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-4 border-slate-800 transition-transform duration-500 group-hover:-translate-y-4 group-hover:rotate-2 hover:cursor-pointer">
                           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-b-2xl z-30 flex justify-center items-center">
                              <div className="w-8 h-1 bg-slate-800 rounded-full"></div>
                           </div>
                           <div className="aspect-[9/19.5] bg-white rounded-[2.5rem] overflow-hidden border-4 border-black relative">
                             <img src={import.meta.env.BASE_URL + "assets/gov-mobile.png"} alt="移动端驾驶舱" loading="lazy" className="w-full h-full object-cover" />
                           </div>
-                        </div>
+                        </a>
                         <div className="absolute -left-6 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-xl border border-slate-100 flex items-center gap-2 text-indigo-600 font-bold text-sm -rotate-12 group-hover:rotate-0 transition-transform">
                           <Rocket size={16} /> 移动端驾驶舱
                         </div>
@@ -293,7 +293,8 @@ export default function App() {
                     title: '景区智能体',
                     icon: MapPin,
                     items: ['智能导览与讲解', '票务分时预约', '客流预警引导'],
-                    image: import.meta.env.BASE_URL + 'assets/景区智能体.png'
+                    image: import.meta.env.BASE_URL + 'assets/景区智能体.png',
+                    link: 'https://marsnowine-create.github.io/JQ-3.1/'
                   },
                   {
                     title: '酒店智能体',
@@ -339,7 +340,13 @@ export default function App() {
                           autoPlay loop muted playsInline
                         />
                       ) : (
-                        <img loading="lazy" src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                        {card.link ? (
+                          <a href={card.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full hover:opacity-90 transition-opacity">
+                            <img loading="lazy" src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                          </a>
+                        ) : (
+                          <img loading="lazy" src={card.image} alt={card.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                        )}
                       )}
                     </div>
                   </div>
