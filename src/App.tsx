@@ -463,9 +463,9 @@ export default function App() {
                     isPC: true
                   },
                   {
-                    title: 'B端工作台',
+                    title: '企业级自动驾驶智能体',
                     icon: LayoutDashboard,
-                    items: ['智能主动分派，业务自动流转', '极简智能应用，上手简单高效', '全域协同联动，破除部门壁垒'],
+                    items: ['AI主动干活，任务驱动人机协同', '简化数字角色，封装实用技能', '打破组织壁垒，以业务事件圆桌响应'],
                     image: import.meta.env.BASE_URL + 'assets/B端工作台.png',
                     isPC: false
                   }
@@ -491,7 +491,7 @@ export default function App() {
                         ? "aspect-video rounded-xl border-[4px] border-slate-800" 
                         : "max-w-[200px] aspect-[9/18] rounded-[2.5rem] border-[6px] border-slate-900"
                     )}>
-                      {card.title === 'B端工作台' ? (
+                      {card.title === '企业级自动驾驶智能体' ? (
                         <video 
                           src={import.meta.env.BASE_URL + 'assets/039d91d7bd61fab6c2525a87493d9d04.mp4'} 
                           className="w-full h-full object-cover"
