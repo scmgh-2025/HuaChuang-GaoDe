@@ -85,6 +85,35 @@ const SectionTitle = ({ title, subtitle, light = false }: { title: string, subti
   </div>
 );
 
+
+const SectionHeading = ({ number, title, color = "blue" }: any) => {
+  const colors = {
+    blue: { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-100', line: 'bg-blue-500' },
+    indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', border: 'border-indigo-100', line: 'bg-indigo-500' },
+    fuchsia: { bg: 'bg-fuchsia-50', text: 'text-fuchsia-600', border: 'border-fuchsia-100', line: 'bg-fuchsia-500' },
+    teal: { bg: 'bg-teal-50', text: 'text-teal-600', border: 'border-teal-100', line: 'bg-teal-500' },
+  };
+  const c = colors[color as keyof typeof colors] || colors.blue;
+  return (
+    <motion.div 
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="flex flex-col md:flex-row items-start gap-6 mb-12 group"
+    >
+      <div className={cn("w-16 h-16 shrink-0 rounded-[1.25rem] flex items-center justify-center border shadow-sm group-hover:scale-110 transition-transform duration-500", c.bg, c.border)}>
+        <span className={cn("text-3xl font-black", c.text)}>{number}</span>
+      </div>
+      <div>
+        <h3 className="text-2xl md:text-3xl font-black text-slate-900 leading-relaxed tracking-tight group-hover:text-slate-700 transition-colors duration-300">
+          {title}
+        </h3>
+        <div className={cn("h-1.5 w-12 mt-6 rounded-full opacity-80 transition-all duration-500 group-hover:w-24", c.line)} />
+      </div>
+    </motion.div>
+  );
+};
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
@@ -171,9 +200,7 @@ export default function App() {
           <div className="space-y-32">
             {/* 1、 政府端 */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-12 leading-relaxed">
-                1、依托大模型技术，通过接入数据和调整算法打造出一套省市区通用的文旅部门智能平台。
-              </h3>
+              <SectionHeading number="01" color="indigo" title="依托大模型技术，通过接入数据和调整算法打造出一套省市区通用的文旅部门智能平台。" />
               <div className="bg-slate-900 text-white rounded-[48px] p-12 relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600 rounded-full blur-[100px] opacity-30 -mr-20 -mt-20"></div>
                 
@@ -250,9 +277,7 @@ export default function App() {
 
             {/* 2、 企业端 */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-12 leading-relaxed">
-                2、形成了一套技术领先的面向旅游行业多角色、可组网的智能体工具。
-              </h3>
+              <SectionHeading number="02" color="blue" title="形成了一套技术领先的面向旅游行业多角色、可组网的智能体工具。" />
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
@@ -315,9 +340,7 @@ export default function App() {
 
             {/* 3、 游客端 */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-12 leading-relaxed">
-                3、围绕游客服务需求，以“行程”为核心开发“黄小西”游客服务智能体。
-              </h3>
+              <SectionHeading number="03" color="fuchsia" title="围绕游客服务需求，以“行程”为核心开发“黄小西”游客服务智能体。" />
               <div className="grid lg:grid-cols-12 gap-12 items-start bg-white p-12 rounded-[3rem] shadow-xl border border-slate-100">
                 <div className="lg:col-span-7 space-y-12">
                   <div className="flex flex-col gap-y-12 justify-center h-full">
@@ -386,9 +409,7 @@ export default function App() {
 
             {/* 4、 迭代升级 */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-12 leading-relaxed">
-                4、以“统一迭代”思维代替“分散建设”思维，不断根据用户需求、数据反馈升级调整功能。
-              </h3>
+              <SectionHeading number="04" color="teal" title="以“统一迭代”思维代替“分散建设”思维，不断根据用户需求、数据反馈升级调整功能。" />
               <div className="grid md:grid-cols-4 gap-6">
                 {[
                   { img: 'v1.png', title: '1.0 表单式提示词', desc: '功能清晰，偏工具被动响应' },
